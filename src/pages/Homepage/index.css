@@ -1,0 +1,36 @@
+
+.pokemon-grid{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(198, 54, 54);
+}
+
+.pokemon-tile img{
+    width: 80%;
+    padding: none;
+}
+
+.pokemon-tile{
+    min-width: 15vw;
+    max-width: 90vw;
+    text-align: center;
+    background-color: red;
+    color: yellow;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 25px;
+}
+
+#link{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 25px;
+    margin-bottom: 24rem;
+}
+
+
+
+
