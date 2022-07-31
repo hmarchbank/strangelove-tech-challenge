@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import PokemonTile from "../../components/PokemonTile"
 import "./index.css"
@@ -22,13 +21,15 @@ const Homepage = (props) => {
             </label>
         </header>
         <div className="pokemon-grid">
-            {props.pokemon === null 
+            {props.pokemon === null
             ? <Loading />
             : props.pokemon.map( (pokemon, index) => {
                 if (pokemon.name.includes(searchInput)){
                     return <>
                         <PokemonTile pokemon={capitalise(pokemon.name)} index={index}/>
                     </>
+                } else {
+                    return ''
                 }
             })}
         </div>

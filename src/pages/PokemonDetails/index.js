@@ -9,7 +9,6 @@ import Loading from "../../components/Loading"
 
 const PokemonDetails = () => {
     const [pokemon, setPokemon] = useState(null)
-    const [errorMessage, setErrorMessage] = useState(null)
     const { pokeNumber } = useParams()
 
     useEffect(() => {
@@ -30,8 +29,8 @@ const PokemonDetails = () => {
                         <div className="text-container">
                             <h1 className="title">{capitalise(pokemon.name)}</h1>
                             <div className="img-flex">
-                                <img src={pokemon.sprites.front_default} /><br />
-                                <img id="backImage" src={pokemon.sprites.back_default} />
+                                <img alt={`frontside sprite of ${pokemon.name}`} src={pokemon.sprites.front_default} /><br />
+                                <img alt={`backside sprite of ${pokemon.name}`} id="backImage" src={pokemon.sprites.back_default} />
                             </div>
                         </div>
                     </div>
@@ -55,7 +54,7 @@ const PokemonDetails = () => {
                             <ul>
                                 {pokemon.moves.map((move, index) => {
                                     if (index > 10) {
-                                        return
+                                        return ''
                                     }
                                     return <li key={index}>{capitalise(move.move.name)}</li>
                                 })}
