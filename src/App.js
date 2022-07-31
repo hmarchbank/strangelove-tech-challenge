@@ -1,8 +1,7 @@
-import Homepage from './pages/Homepage';
-import {useEffect, useState} from 'react'
 import axios from 'axios';
-import Navbar from './components/Navbar';
+import {useEffect, useState} from 'react'
 import { Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage';
 import PokemonDetails from './pages/PokemonDetails';
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <Routes>
         <Route path='/' element={<Homepage pokemon={pokemon}/>}/>
         <Route path="/pokemon/:pokeNumber" element={<PokemonDetails />} />

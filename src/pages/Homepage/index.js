@@ -1,19 +1,36 @@
 import { NavLink } from "react-router-dom"
+import { useState } from "react"
 import PokemonTile from "../../components/PokemonTile"
 import "./index.css"
+import {capitalise} from "../../utilities/utilityFunctions"
+import Loading from "../../components/Loading"
 
 const Homepage = (props) => {
-    console.log(props.pokemon)
+    const [searchInput, setSearchImput] = useState('')
+
+    const handleChange = (event) => {
+        event.preventDefault()
+        setSearchImput(event.target.value.toLowerCase())
+    }
+
+
     return <>
+        <header>
+            <h1 id="mainTitle">Pokedex</h1>
+            <label>Search for your favourite Pokemon by name<br/>
+                <input placeholder="Pokemon name" onChange={handleChange}/>
+            </label>
+        </header>
         <div className="pokemon-grid">
             {props.pokemon === null 
-            ? <h1>Loading</h1>
+            ? <Loading />
             : props.pokemon.map( (pokemon, index) => {
-                pokemon = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
-              return <>
-                <PokemonTile pokemon={pokemon} index={index}/>
-              </>
-            })  }
+                if (pokemon.name.includes(searchInput)){
+                    return <>
+                        <PokemonTile pokemon={capitalise(pokemon.name)} index={index}/>
+                    </>
+                }
+            })}
         </div>
     </>
 }

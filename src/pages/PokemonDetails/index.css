@@ -1,0 +1,151 @@
+h1{
+    text-align: start;
+    font-size: 2.5rem;
+}
+
+.flex-cols{
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 2.5vh auto;
+    border-radius: 25px;
+    background-color: red;
+    font-size: 1.2rem;
+    box-shadow: 5px 10px #d77a7a;
+}
+
+.text-container{
+    padding: 1rem;
+    height: 80%;
+}
+
+.col{
+    width: 30%;
+    height: 90%;
+}
+
+.img-flex{
+    display: flex;
+}
+
+.image-col{
+    width: 40%
+}
+
+.img-flex img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.navigation-buttons{
+    text-align: center;
+    width: 100vw;
+}
+
+.navigation-btn{
+    width: 35%;
+    color: yellow;
+    background-color: red;
+}
+
+.navigation-btn:hover{
+    background-color: rgb(192, 41, 41);
+}
+
+@media only screen and (max-width: 800px) {
+
+    .navigation-buttons{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .navigation-btn{
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    #backImage{
+        display: none;
+    }
+
+    .image-col img{
+        width: 70%;
+    }
+
+    .col{
+        width: 80vw;
+        height: auto;
+        margin: 1rem auto;
+    }
+    .flex-cols{
+        flex-direction: column;
+    }
+    
+    h1{
+        text-align: center;
+    }
+
+    h1{
+        font-size: 3rem;
+        margin: 0rem auto;
+    }
+
+    p, li{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 399px) {
+    p, li{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    h1, h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+    p, li{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    h1{
+        font-size: 1.9rem;
+    }
+}
+
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    .img-flex{
+        flex-direction: column;
+    }
+
+    h1, h2{
+        font-size: 1.5rem;
+    }
+
+    p, li{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }    
+}
+
+@media only screen and (min-width: 2000px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    p, li{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }    
+}

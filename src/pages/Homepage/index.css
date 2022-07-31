@@ -1,3 +1,31 @@
+body{
+    background-color: rgb(198, 54, 54);
+    color: yellow;
+    font-family: 'Press Start 2P','Kanit', sans-serif;
+    /* min-height: 90vh; */
+}
+
+#mainTitle{
+    text-align: center;
+    margin: 3rem auto;
+    font-size: 3rem;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+header input{
+    font-family: 'Press Start 2P','Kanit', sans-serif;
+    padding: .8rem;
+    border-radius: 25px;
+    width: 25%;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+}
 
 .pokemon-grid{
     box-sizing: border-box;
@@ -5,7 +33,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(198, 54, 54);
 }
 
 .pokemon-tile img{
@@ -14,6 +41,7 @@
 }
 
 .pokemon-tile{
+    box-shadow: 5px 10px #d77a7a;
     min-width: 15vw;
     max-width: 90vw;
     text-align: center;
@@ -24,13 +52,79 @@
     border-radius: 25px;
 }
 
-#link{
-    background-color: white;
-    padding: 1rem;
-    border-radius: 25px;
-    margin-bottom: 24rem;
+.more-btn{
+    background: yellow;
+    color: red;
+}
+
+.more-btn:hover{
+    background: rgb(227, 227, 39);
 }
 
 
+#link{
+    color: yellow;
+    border-radius: 25px;
+    margin-bottom: 24rem;
+    text-decoration: none;
+}
+
+label{
+    max-width: 90%;
+}
+
+#link:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+@media only screen and (max-width:400px) {
+    #mainTitle{
+        font-size: 2.5rem;
+    }
+
+    header input{
+        width: 80%;
+    }
+
+    label{
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (min-width:401px) and (max-width: 639px) {
+    .pokemon-tile{
+        width: 80%;
+    }
+
+    .pokemon-tile h2 {
+        font-size: 2rem;
+    }
+    
+    .pokemon-tile a {
+        font-size: 1.5rem;
+    }
+
+    header input{
+        width: 80%;
+    }
+
+    header{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+}
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+    .pokemon-tile{
+        width: 40%;
+    }
+
+    header input{
+        width: 50%;
+    }
+    
+}
 
 
