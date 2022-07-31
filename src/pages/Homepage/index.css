@@ -36,7 +36,7 @@ header input{
 }
 
 .pokemon-tile img{
-    width: 80%;
+    width: 35%;
     padding: none;
 }
 
@@ -48,7 +48,7 @@ header input{
     background-color: red;
     color: yellow;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem .45rem;
     border-radius: 25px;
 }
 
