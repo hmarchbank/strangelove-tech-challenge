@@ -54,9 +54,19 @@ h1{
 
 @media only screen and (max-width: 800px) {
 
-    .navigation-buttons{
-        display: flex;
-        flex-direction: column-reverse;
+    .navigation-buttons button{
+        width: 40%;
+        font-size: 0.8rem;
+        margin: 1rem 1rem
+    }
+    
+    #homepage{
+        margin: 1rem auto; 
+        width: 60%;
+    }
+
+    .flex-cols{
+        margin: 1rem auto;
     }
 
     .navigation-btn{
@@ -66,7 +76,7 @@ h1{
 
     .flex-container{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
     #backImage{

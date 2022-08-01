@@ -80,7 +80,7 @@ label{
 
 @media only screen and (max-width:400px) {
     #mainTitle{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     header input{
@@ -90,20 +90,40 @@ label{
     label{
         font-size: .9rem;
     }
+    .pokemon-tile{
+        width: 35%;
+        margin: 5% 2.5%;
+        padding: 0;
+    }
+
+    .pokemon-tile h2{
+        font-size: .6rem
+    }
+
+    .pokemon-tile button{
+        margin: 1rem auto;
+        width: 80%;
+        font-size: .6rem;
+    }
 }
 
 @media only screen and (min-width:401px) and (max-width: 639px) {
     .pokemon-tile{
-        width: 80%;
+        width: 40%;
+        margin: 5% 2.5%;
+        padding: 0;
     }
 
-    .pokemon-tile h2 {
-        font-size: 2rem;
+    .pokemon-tile h2{
+        font-size: 1rem
     }
-    
-    .pokemon-tile a {
-        font-size: 1.5rem;
+
+    .pokemon-tile button{
+        margin: 1rem auto;
+        width: 60%;
+        font-size: .6rem;
     }
+
 
     header input{
         width: 80%;

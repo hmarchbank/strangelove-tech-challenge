@@ -24,6 +24,7 @@ const PokemonDetails = () => {
     return <>
         {pokemon === null ? <Loading /> :
             <div className="flex-container">
+                <Buttons type="homepage"/>
                 <div className="flex-cols">
                     <div className="image-col col">
                         <div className="text-container">
@@ -62,7 +63,7 @@ const PokemonDetails = () => {
                         </div>
                     </div>
                 </div>
-                <Buttons pokeNumber={pokeNumber} />
+                <Buttons pokeNumber={pokeNumber} type="next-previous" />
             </div>
         }
     </>
