@@ -11,7 +11,7 @@ const Homepage = (props) => {
         event.preventDefault()
         setSearchImput(event.target.value.toLowerCase())
     }
-
+    console.log(props.pokemon)
 
     return <>
         <header>
@@ -26,7 +26,7 @@ const Homepage = (props) => {
             : props.pokemon.map( (pokemon, index) => {
                 if (pokemon.name.includes(searchInput)){
                     return <>
-                        <PokemonTile pokemon={capitalise(pokemon.name)} index={index}/>
+                        <PokemonTile key={index} pokemon={capitalise(pokemon.name)} index={index}/>
                     </>
                 } else {
                     return ''

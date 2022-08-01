@@ -2,7 +2,7 @@ import '../../src/index.css'
 
 const Loading = () => {
     return <>
-    <div class="loading-page">
+    <div className="loading-page">
         <h1>Loading...</h1>
     </div>
     </>
